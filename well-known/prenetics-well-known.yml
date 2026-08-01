@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of /.well-known/* on prenetics.com and im8health.com
+hosts:
+- host: https://im8health.com
+  documents:
+  - path: /.well-known/ucp
+    status: 200
+    file: prenetics-ucp.json
+    note: Universal Commerce Protocol (UCP) merchant profile for the IM8 Health Shopify store; advertises the UCP shopping MCP endpoint, checkout/cart/catalog capabilities, and Google Pay / Shop Pay / Shopify card payment handlers.
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://prenetics.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

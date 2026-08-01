@@ -1,8 +1,31 @@
 aid: prenetics
 name: Prenetics
-description: Prenetics is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Prenetics Global Limited (NASDAQ: PRE) is a consumer healthcare and longevity
+  company whose flagship brand is IM8, a science-backed daily-nutrition and
+  longevity supplement line co-founded with David Beckham that reached roughly
+  $120M in annual recurring revenue within its first year. The company's IM8
+  Health direct-to-consumer storefront runs on Shopify and exposes an
+  agent-native commerce surface: it publishes an /llms.txt agent guide and a
+  Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp that
+  advertises a hosted Model Context Protocol (MCP) shopping endpoint, letting
+  AI agents search the catalog, build carts, and drive buyer-approved checkout
+  via Shop Pay, Google Pay, and Shopify card handlers. Prenetics itself
+  publishes no separate developer/API program; the agent-commerce surface is the
+  IM8 Health UCP/MCP storefront.
 url: https://raw.githubusercontent.com/api-evangelist/prenetics/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/635b81308992081d90756acb/69439a3fcfe67a98dae5dae7_android-chrome-512x512-256x256.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,10 +34,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Consumer Health
+- Longevity
+- Nutrition
+- Supplements
+- Ecommerce
+- Agent Commerce
+- MCP
+- UCP
+- Shopify
+apis:
+- name: IM8 Health Agent Commerce (UCP / MCP)
+  description: >-
+    Agent-native commerce surface for the IM8 Health (Prenetics) Shopify
+    storefront, implemented with the Universal Commerce Protocol (UCP,
+    2026-04-08) over MCP. Agents discover capabilities at /.well-known/ucp, then
+    search the catalog, create carts, and run buyer-approved checkout with
+    Google Pay / Shop Pay / Shopify card payment handlers.
+  humanURL: https://im8health.com
+  baseURL: https://im8store.myshopify.com/api/ucp/mcp
+  tags:
+  - Agent Commerce
+  - MCP
+  - UCP
+  - Shopify
+  - Ecommerce
+  properties:
+  - type: MCPServer
+    url: mcp/prenetics-mcp.yml
+  - type: WellKnown
+    url: well-known/prenetics-well-known.yml
+  - type: LLMsTxt
+    url: llms/prenetics-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +77,33 @@ maintainers:
 common:
 - type: Website
   url: https://prenetics.com
+- type: Portfolio
+  url: https://im8health.com
+  name: IM8 Health (flagship product)
+- type: InvestorRelations
+  url: https://ir.prenetics.com/
+- type: Blog
+  url: https://ir.prenetics.com/news-events/press-releases
+- type: Careers
+  url: https://careers.prenetics.com/
+- type: TermsOfService
+  url: https://im8health.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://im8health.com/policies/privacy-policy
+- type: MCPServer
+  url: mcp/prenetics-mcp.yml
+- type: WellKnown
+  url: well-known/prenetics-well-known.yml
+- type: LLMsTxt
+  url: llms/prenetics-llms.txt
+- type: Conventions
+  url: conventions/prenetics-conventions.yml
+- type: Conformance
+  url: conformance/prenetics-conformance.yml
+- type: DomainSecurity
+  url: security/prenetics-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  pass: local-v1
+  artifacts_added: 6

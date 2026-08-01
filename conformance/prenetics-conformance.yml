@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://im8health.com/.well-known/ucp
+standards:
+- id: ucp-2026-04-08
+  conforms: true
+  evidence: .well-known/ucp advertises UCP version 2026-04-08 (and 2026-01-23) with the dev.ucp.shopping service.
+- id: mcp
+  conforms: true
+  evidence: UCP shopping service exposed over transport "mcp" at https://im8store.myshopify.com/api/ucp/mcp.
+- id: openrpc
+  conforms: true
+  evidence: Shopping service references OpenRPC schema https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json.
+- id: google-pay
+  conforms: true
+  evidence: payment_handlers include com.google.pay (Google Pay UCP handler 2026-01-11).
+- id: shop-pay
+  conforms: true
+  evidence: payment_handlers include dev.shopify.shop_pay (2026-04-08).
+- id: oauth2
+  conforms: false
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false

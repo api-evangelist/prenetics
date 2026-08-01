@@ -1,0 +1,11 @@
+{
+  "repo": "prenetics",
+  "feeds": [
+    {
+      "source": "https://ir.prenetics.com/",
+      "error": "TimeoutError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}
