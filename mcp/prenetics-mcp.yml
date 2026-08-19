@@ -2,16 +2,13 @@ generated: '2026-07-20'
 method: searched
 status: published
 source: https://im8health.com/.well-known/ucp
-notes: >-
-  IM8 Health (Prenetics' flagship consumer-supplement brand) runs on Shopify and
-  exposes an agent-native commerce surface via the Universal Commerce Protocol
-  (UCP, https://ucp.dev). The store's UCP merchant profile at
-  https://im8health.com/.well-known/ucp advertises a hosted MCP endpoint for the
-  UCP shopping service. The endpoint performs a UCP agent-profile handshake before
-  it will answer tools/list (a raw JSON-RPC tools/list without a profile URI
-  returns error -32001 invalid_profile_url), so the tool surface below is captured
-  from the store's published /llms.txt agent flow and the UCP shopping OpenRPC
-  schema it references, not fabricated.
+notes: IM8 Health (Prenetics' flagship consumer-supplement brand) runs on Shopify and exposes an agent-native
+  commerce surface via the Universal Commerce Protocol (UCP, https://ucp.dev). The store's UCP merchant
+  profile at https://im8health.com/.well-known/ucp advertises a hosted MCP endpoint for the UCP shopping
+  service. The endpoint performs a UCP agent-profile handshake before it will answer tools/list (a raw
+  JSON-RPC tools/list without a profile URI returns error -32001 invalid_profile_url), so the tool surface
+  below is captured from the store's published /llms.txt agent flow and the UCP shopping OpenRPC schema
+  it references, not fabricated.
 server:
   name: im8-health-ucp-shopping
   transport: http
@@ -56,3 +53,11 @@ rules:
 - Checkout requires human approval; agents must not complete payment without explicit buyer consent.
 - The MCP endpoint is rate-limited per IP; back off on HTTP 429.
 - Pass buyer context (address_country, currency) for accurate pricing and availability.
+deployment:
+  mode: remote
+  endpoint: https://im8store.myshopify.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
