@@ -53,9 +53,9 @@ tags:
 - Nutrition
 - Supplements
 - E-Commerce
-- Agent Commerce
+- Agentic Commerce
 - MCP
-- UCP
+- Universal Commerce Protocol
 - Shopify
 tags_raw:
 - Company
@@ -79,9 +79,9 @@ apis:
   humanURL: https://im8health.com
   baseURL: https://im8store.myshopify.com/api/ucp/mcp
   tags:
-  - Agent Commerce
+  - Agentic Commerce
   - MCP
-  - UCP
+  - Universal Commerce Protocol
   - Shopify
   - E-Commerce
   tags_raw:
