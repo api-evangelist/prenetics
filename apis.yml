@@ -97,6 +97,9 @@ apis:
     url: well-known/prenetics-well-known.yml
   - type: LLMsTxt
     url: llms/prenetics-llms.txt
+  x-surface: platform-generated
+  x-platform: shopify
+  x-platform-surface: ucp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
