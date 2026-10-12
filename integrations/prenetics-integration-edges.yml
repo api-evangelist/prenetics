@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/prenetics/integrations
+- https://n8n.io/integrations/prenetics/
+- https://composio.dev/toolkits/prenetics
+- https://monid.ai/tools/prenetics
+checked:
+- https://composio.dev/toolkits/prenetics
+- https://monid.ai/tools/prenetics
+- https://n8n.io/integrations/prenetics/
+- https://zapier.com/apps/prenetics/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
